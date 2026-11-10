@@ -225,3 +225,69 @@ git switch -c feature/pid-control
                                          ↓
                               更新 main，开始下一个任务
 ```
+
+## 当前进度于任务安排
+
+任务流程图:
+```text
+进程1:
+读取ads1263的数据 -> 进行直流误差分析并修正误差 -> 读取PT1000+MAX31865并计算温度 -> 与高精度温度计进行对比，进行二次修正
+进程2:
+拿取u型端子线，组装开关电源和烧开水系统（不包括加热棒和继电器）-> 先写出一版本可以用的烧开水代码（可以优先使用MAX31865自兼容的12bitadc，先读取数据并进行测试），测试代码完整性 
+进程3:(在完成进程1和2以后)
+结合ads1263计算出来的温度值、稳定温度值、和实际温度值，进行误差修正以及调整参数。
+
+```
+
+### 模块资料
+#### ads1263 32bit 低采样率adc
+
+
+```text
+模块相关信息：
+量程0-5v
+供电电压3.3-5v
+大致静态电流浮动范围10uV
+```
+
+购买并调试ads1263(链接：https://item.taobao.com/item.htm?id=629282869603&mi_id=0000p6myBvXNMH_kTdBE8oJaVZx_Re9u93pvVMzGqauJtmo&spm=tbpc.boughtlist.suborder_itemtitle.1.7dd72e8dbf5TaL)
+
+
+#### 热电阻模块
+模块连接：
+https://item.taobao.com/item.htm?from=detail&id=744886636009&mi_id=0000ywOaWYKgBqGtzwDLi1W3PdRosqKG2PAOYWD5A59qCng&spm=tbpc.orderdetail.suborder_itempic.1.10876aa6kNTjur
+
+热电阻模块资料如下：
+
+热电阻温度传感器模块_LZ_TD200(210)_V1.0模块资料链接：https://pan.baidu.com/s/15drTm-yj2n5QpWswvl6-NA 
+提取码：jyvc
+
+##### 文件夹树
+
+```text
+热电阻PT100&PT1000温度传感器模块资料/
+├── 热电阻温度传感器模块_LZ_TD200(210)_V1.0模块资料/
+│   ├── 上位机软件/
+│   │   └── 凌智-热电阻检测测试.exe
+│   ├── 串口协议说明/
+│   │   └── 模块协议说明文档.pdf
+│   ├── 尺寸图/
+│   │   ├── 【3D尺寸图】热电阻温度传感器模块_LZ_TD200(210)_V1.0.png
+│   │   ├── 【DXF】热电阻温度传感器模块_LZ_TD200(210)_V1.0.dxf
+│   │   └── 【尺寸图】热电阻温度传感器模块_LZ_TD200(210)_V1.0.png
+│   ├── 用户手册/
+│   │   └── 【用户使用手册】热电阻温度传感器模块_LZ_TD200(210)_V1.0用户使用手册.pdf
+│   ├── 芯片手册/
+│   │   ├── STC8H8K64U.PDF
+│   │   ├── TI-INA826.pdf
+│   │   ├── TI-LMV358.pdf
+│   │   └── TI-REF3025.pdf
+│   └── COM15_3.csv
+└── 热电阻温度传感器模块_LZ_TD200(210)_V1.0模块资料.rar
+```
+
+
+主要资料内容：
+- 用户手册，写明如何根据模拟输出AO计算出电阻，进而计算出当前温度；
+- 模块协议说明文档.pdf，写明uart串口发送的数据格式是什么，如何解析读取数据（在使用模块自带的12bitadc的读取数据的时候需要用到）
+
