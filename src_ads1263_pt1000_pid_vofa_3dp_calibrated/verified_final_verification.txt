@@ -1,0 +1,5 @@
+Fixed temperature offset +1.997 C; user reading 18.603 C -> 20.600 C.
+Vivado setup slack=1.618 ns, hold slack=0.049 ns.
+Project top/source set/17 IO pins/published bit verified.
+Only converter and top RTL changed relative to previous build; other active RTL and XDC unchanged.
+BIT SHA256=254c131858db65aa2eebcde393778c1fb481f090b27abda7d6dc8266cb3f5313

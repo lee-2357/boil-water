@@ -1,0 +1,19 @@
+Calibration check AO=3651312 uV: 18.603 C + 1.997 C = 20.600 C
+Golden vectors=1521, maximum fixed-point error vs manual formula=0.000613 C
+PASS: legacy reference modules match read-only original source verbatim
+PASS AO converter: 1521 vectors, nominal polynomial error <0.001C over full manual range
+sim/tb_pt1000_ao.v:30: $finish called at 8321900000 (1ps)
+PASS control: qualification, heat/cool, deadtime=2100 cycles, ADC/AO/window/stale faults, reset latch
+sim/tb_tec_control.v:75: $finish called at 428380000 (1ps)
+System live: AO=3664153 uV R=1084623 mOhm T=23679 mdegC, 7 samples
+PASS end-to-end SPI ADC 5 SPS -> AO -> PT1000 -> heat/cool PID -> DRDY timeout stop, frames=21
+sim/tb_ao_pid_system.v:118: $finish called at 11021700000 (1ps)
+PASS legacy equivalence: 1000 PID updates incl. integral/saturation and cycle-identical PWM/reversal outputs
+sim/tb_legacy_equivalence.v:54: $finish called at 4040300000 (1ps)
+PASS physical UART: integer/fraction/sign, limits, overflow, malformed/framing discard, CRLF, bare-number idle commit
+sim/tb_vofa_uart.v:57: $finish called at 576340000 (1ps)
+PASS actual UART TX: exact three decimals, negative temperatures, dynamic target, atomic snapshots
+sim/tb_report_millidegree.v:47: $finish called at 207640000 (1ps)
+PASS PID uses sub-0.1 C temperature/setpoint digits, original gain units and saturation preserved
+sim/tb_pid_millidegree.v:30: $finish called at 14820000 (1ps)
+All checks passed.
