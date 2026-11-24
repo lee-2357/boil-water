@@ -1,0 +1,2 @@
+# Preserve source bytes and source_sha256.json across Windows Git checkouts.
+* -text whitespace=cr-at-eol

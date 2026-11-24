@@ -1,0 +1,38 @@
+{
+  "repository": "https://github.com/lee-2357/boil-water",
+  "directory": "src_ads1263_pt1000_pid_vofa_3dp_calibrated",
+  "sources": [
+    {
+      "name": "ads1263_spi.v",
+      "github_blob_sha": "b53f93e4b60d9aa36ff595d362a6e3ce829e12e5"
+    },
+    {
+      "name": "ads126x_voltage_reader.v",
+      "github_blob_sha": "004aaac30aa1623f5fc90de1e9b03df93eba443c"
+    },
+    {
+      "name": "pt1000_ao_temperature.v",
+      "github_blob_sha": "4d495b32422d3676f5eedabc320be3b13398618f"
+    },
+    {
+      "name": "smart_zynq_ads1263_tec_pid.v",
+      "github_blob_sha": "81045e79a7acd9670d4f086ebd3e480b5298eb73"
+    },
+    {
+      "name": "tec_temperature_control.v",
+      "github_blob_sha": "f4db25cdd68be2c8fa192616b1c9996dd4ba22ca"
+    },
+    {
+      "name": "tec_pid_core.v",
+      "github_blob_sha": "43f72d8cfb89ef590458324cab7ff7c67e286bc8"
+    },
+    {
+      "name": "pc_temperature_command.v",
+      "github_blob_sha": "b5cd025d430b27876dbfd7fe32a2056da17592b0"
+    },
+    {
+      "name": "smart_zynq_ads1263_tec_pid.xdc",
+      "github_blob_sha": "c662bbda34fd6b9b8dee34ac97761b8c7695b30f"
+    }
+  ]
+}
