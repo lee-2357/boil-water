@@ -1,0 +1,10 @@
+{
+  "ads1263_spi.v": "cfb85bc44f41a8a2baa876aef1a4f83fbe1493a8e1cb43ca523f3fcc6362d555",
+  "ads126x_voltage_reader.v": "cecac0e942d6ac18ae7bf7a28a74c6c9bb641217c5068007141ddb1cf9289266",
+  "pt1000_ao_temperature.v": "d4c97f012d0ab9678452abf96e596a906e67e7593488dde006b455913ae25aae",
+  "pc_temperature_command.v": "05dcd8be7e9cbae3e12778df7ac0098bb5e207e45b87d9c36971eeb1c383134b",
+  "tec_pid_core.v": "e2041d40a0a81246e327c84c1f89cf1da8bf974bc906168837d53e2b42bc0a5b",
+  "tec_temperature_control.v": "c71237f0af81a698f637ea8b696fc4dca78e15ed2abcc89b58be1545ef2f5bab",
+  "smart_zynq_ads1263_tec_pid.v": "41e9c2e36e1f6e9375bc1f814ced05e58951827c144c8466aa51ee916eed70a6",
+  "smart_zynq_ads1263_tec_pid.xdc": "8acf199145a717f9617169aad83ddb827f865c4c522a09f68bc1602c55ed0d30"
+}

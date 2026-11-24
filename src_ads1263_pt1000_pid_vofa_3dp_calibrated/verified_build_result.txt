@@ -1,0 +1,10 @@
+Project: boil-water-ads1263-test2
+Top: smart_zynq_ads1263_tec_pid
+Sources: ads1263_spi.v ads126x_voltage_reader.v pt1000_ao_temperature.v pc_temperature_command.v tec_pid_core.v tec_temperature_control.v smart_zynq_ads1263_tec_pid.v
+Constraints: F:/workplaces/vivado_fpga/boil-water-ads1263-test2/src/smart_zynq_ads1263_tec_pid.xdc
+Synthesis: synth_design Complete!
+Implementation: write_bitstream Complete!
+max worst slack (all path groups): 1.618 ns
+min worst slack (all path groups): 0.049 ns
+Generated: F:/workplaces/vivado_fpga/boil-water-ads1263-test2/boil-water-ads1263-test2.runs/impl_1/smart_zynq_ads1263_tec_pid.bit
+Published: F:/workplaces/vivado_fpga/boil-water-ads1263-test2/build/smart_zynq_ads1263_tec_pid.bit
